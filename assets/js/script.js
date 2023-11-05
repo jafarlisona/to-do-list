@@ -25,6 +25,10 @@ const click = (event) => {
     close.onclick = () => {
       list.remove();
     };
+    //task tamamlananda ustunden xett cekilsin
+    list.onclick = () => {
+      list.classList.toggle("done");
+    };    
     //localStorage de qalsin diye arr yaratdim ,ve inputa yazilanlari elave etdim
     const arr = JSON.parse(localStorage.getItem("tasks")) || [];
     arr.push(list.textContent);
